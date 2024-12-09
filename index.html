@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Redirect based on the device
+        if (/android/i.test(userAgent)) {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.smartbest.app";
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            window.location.href = "https://apps.apple.com/us/app/smartbest/id6738626462";
+        } else {
+            window.location.href = "https://smartbest.co"; // Fallback or website URL
+        }
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <p>If you're not redirected automatically, <a href="https://smartbest.co">click here</a>.</p>
+</body>
+</html>
